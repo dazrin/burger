@@ -11,6 +11,8 @@
 ## About
 This is a simple application that allows users to input the names of burgers they would like to eat. The user begins by typing the name of the burger of choice into a form, followed by pressing the 'submit' button. Once the user inputs and submits their desired burger into the text-field, their inputted burger will be displayed onto the screen, along with a 'devour' button that, when pressed, will move the inputted burger to a new list of burgers that you have already devoured. This burger logger application was built using MySQL for the database, uses NodeJS and Express to build the server, queries, and routes, as well as handlebars to generate HTML for the front-end pages. The application's codebase follows the Model View Controller design paradigm.
 
+Link to deployed app: https://limitless-badlands-69268.herokuapp.com/
+
 ## Instructions
 1. Enter your desired burger name into the text-field
 2. Click the 'submit' button below the text-field.
@@ -19,7 +21,7 @@ This is a simple application that allows users to input the names of burgers the
 5. Once you click the devour button, it will be displayed on the other side of the screen, along with other burgers that have already been devoured. 
 
 ## Screenshots
-![BurgerScreenshot](<url> "A burger logger application")
+![BurgerScreenshot](/public/assets/img/screenshot.png "A burger logger application")
 
 ## License
 MIT License

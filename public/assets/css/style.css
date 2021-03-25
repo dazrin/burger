@@ -3,9 +3,13 @@ body {
     background-color: lavender;
 }
 
+.container {
+    margin-top: 5em
+}
+
 h1 {
     font-size: 2rem;
-    color: red;
+    color: blue;
 }
 
 .burger-img {
