@@ -12,6 +12,7 @@ if(process.env.JAWSDB_URL) {
         host: 'localhost',
         port: 3306,
         user: 'root',
+        // UPDATE THIS VALUE WITH YOUR OWN PASSWORD!
         password: 'kingDDom.',
         database: 'burgers_db'
     });
