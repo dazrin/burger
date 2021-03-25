@@ -32,6 +32,62 @@ const orm = {
             if (err) { throw err; }
             cb(result);
         });
+    },
+
+    insertOne(table, col, val, cb) {
+      let queryString = `INSERT INTO ${table}`;
+  
+      queryString += ' (';
+      queryString += col;
+      queryString += ') ';
+      queryString += 'VALUES (';
+      queryString += '?';
+      queryString += ') ';
+  
+      console.log(queryString);
+  
+      connection.query(queryString, val, (err, result) => {
+        if (err) {
+          throw err;
+        }
+  
+        cb(result);
+      });
+  },
+
+  updateOne(table, objColVals, condition, cb) {
+    let queryString = `UPDATE ${table}`;
+
+    queryString += ' SET ';
+    queryString += objToSql(objColVals);
+    queryString += ' WHERE ';
+    queryString += condition;
+
+    console.log(queryString);
+    connection.query(queryString, (err, result) => {
+      if (err) {
+        throw err;
+      }
+
+      cb(result);
+    });
+  },
+
+  deleteOne(table, condition, cb) {
+    let queryString = `DELETE FROM ${table}`;
+    queryString += ' WHERE ';
+    queryString += condition;
+
+    console.log(queryString);
+    connection.query(queryString, (err, result) => {
+    if (err) {
+        throw err;
     }
+
+    console.log(`${result.affectedRows} burger deleted! ${condition}\n`);
+    cb(result);
+    });
+}
+
 }
 module.exports = orm;

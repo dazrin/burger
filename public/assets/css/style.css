@@ -1,0 +1,27 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: lavender;
+}
+
+h1 {
+    font-size: 2rem;
+    color: red;
+}
+
+.burger-img {
+    width: 150px;
+}
+
+.error {
+    display: none;
+}
+
+textarea {
+    border: 1px solid rgba(0,0,0,.125);
+}
+
+@media screen and (max-width: 600px) {
+    .burger-img {
+        width: 100px;
+    }
+}
